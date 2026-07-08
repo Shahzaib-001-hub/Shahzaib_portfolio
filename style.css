@@ -11,7 +11,9 @@ body{
     background:#2f2f3d;
 }
 
-/* Header */
+/* --------------------------------------------------- */
+/* ---------------     Header     -------------------- */
+/* --------------------------------------------------- */
 
 header{
     width:100%;
@@ -32,15 +34,11 @@ header{
     display:flex;
     gap:8px;
     color:#fff;
-    height: 250px;
-    width: 300px;
-    margin-top: -100px;
+    height: 200px;
+    width: 250px;
+    margin-top: -95px;
 }
 
-.logo i{
-    color:#f5b400;
-    font-size:12px;
-}
 
 /* Menu */
 
@@ -49,7 +47,7 @@ header{
     list-style:none;
     gap:35px;
     text-align:center;
-    margin-top: -100px;
+    margin-top: -95px;
 }
 
 .menu li a{
@@ -73,18 +71,57 @@ header{
     display:flex;
     align-items:center;
     gap:22px;
-    margin-top: -100px;
+    margin-top: -95px;
 }
 
 .social-icons i{
     color:#fff;
     cursor:pointer;
-    transition:.3s;
+    
 }
 
 .social-icons i:hover{
     color:#f5b400;
 }
+
+
+/* --------------------------------------------------- */
+/* ---------------  Main Content  -------------------- */
+/* --------------------------------------------------- */
+
+.Main-section{
+    width:100%;
+    padding:25px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.section_1{
+    grid-row: 1;
+    grid-column: 1;
+}
+.section_2{
+    grid-row: 2;
+    grid-column: 1;
+}
+.section_3{
+    grid-row: 1;
+    grid-column: 2;
+}
+.section_4{
+    grid-row: 2;
+    grid-column: 2;
+}
+.section_5{
+    grid-row: 1;
+    grid-column: 3;
+}
+.section_6{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+
 
 /* Responsive */
 
