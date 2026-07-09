@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Serif', serif;
     background-color: #2f2f3d;
 }
 
@@ -15,11 +18,12 @@ body {
 
 header {
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index:1;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 
 }
 
@@ -29,21 +33,23 @@ header {
 
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin-top: -200px;
     padding: 0 8%;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
     align-items: center;
+    z-index: 0;
+
 }
 
 /* Logo */
 
 .logo {
+    width: 250px;
+    height: 150px;
     display: flex;
     gap: 8px;
     color: #fff;
-    height: 100px;
-    width: 250px;
 
 }
 
@@ -98,14 +104,14 @@ header {
 /* --------------------------------------------------- */
 
 .Main-section {
-    
+
     max-width: 100%;
-    margin: 110px auto 0;
-    padding: 0 8%;
+    margin: 150px;
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
-    align-items: start;
-    
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 /* First Column ( Left Column ) */
@@ -148,48 +154,55 @@ header {
 
 /* 2nd Column ( Middle Column ) */
 
-.section_3 {
+.section_2 {
+    max-width: 100%;
+    margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+
 }
 
 .circle {
-    width: 500px;
-    height: 500px;
+    width: 420px;
+    height: 420px;
+    background: #3b3b4e;
     border-radius: 50%;
-    background-color: #3b3b4a;
     position: absolute;
+    left: 35%;
+
+
 }
 
-.section_3 img {
-    width: 500px;
+.section_2 img {
+    width: 420px;
+    height: auto;
     position: relative;
-    margin-top: 30px;
+    transform: translatey(5%);
+    left: -20%;
 }
 
 
-.section_5 span {
+.section_3 span {
     color: #9d9daa;
     font-size: 16px;
 }
 
-.section_5 h3 {
+.section_3 h3 {
     color: #fff;
     font-size: 24px;
     line-height: 1.5;
     margin: 15px 0 25px;
 }
 
-.section_5 a {
+.section_3 a {
     color: #f5b400;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
 }
 
-.section_5 a:hover {
+.section_3 a:hover {
     color: #ffd54d;
 }
 
@@ -223,9 +236,10 @@ header {
 /* ------------------------------- */
 
 .brands {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -140px;
     padding: 18px;
     background-color: #3E3F4F;
     display: flex;
@@ -233,7 +247,7 @@ header {
     align-items: center;
     gap: 30px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .brand-card {
@@ -261,19 +275,21 @@ header {
     padding: 110px 8%;
     margin: -50px auto 0;
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     background-color: #2b2b38;
 }
+
+
+
 
 /* Left */
 
 .services-left h2 {
 
     color: #fff;
-    font-size: 52px;
+    font-size: 36px;
     line-height: 1.2;
-
     margin-bottom: 25px;
 }
 
@@ -281,7 +297,6 @@ header {
 
     color: #8d8d99;
     line-height: 1.9;
-
     margin-bottom: 45px;
 }
 
@@ -291,7 +306,6 @@ header {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 35px;
 }
 
@@ -299,7 +313,6 @@ header {
 
     color: #f5b400;
     font-size: 38px;
-
     margin-bottom: 8px;
 }
 
@@ -324,11 +337,8 @@ header {
 .service-card {
 
     display: flex;
-
     align-items: center;
-
     padding-bottom: 25px;
-
     border-bottom: 1px solid #444451;
 }
 
@@ -336,14 +346,12 @@ header {
 
     width: 170px;
     height: 95px;
-
     object-fit: cover;
 }
 
 .service-info {
 
     margin-left: 25px;
-
     flex: 1;
 }
 
@@ -351,7 +359,6 @@ header {
 
     color: #fff;
     font-size: 30px;
-
     margin-bottom: 10px;
 }
 
@@ -371,12 +378,107 @@ header {
 
 @media(max-width:768px) {
 
+    /* Navigation Bar */
     .menu {
         display: none;
     }
 
     .navbar {
         justify-content: space-between;
+        max-width: 50%;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: flex-end;
     }
 
+    /* Main Section */
+
+    .Main-section {
+        margin: 140px  0;
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        
+    }
+
+    .section_1 h1 {
+        font-size: 24px;
+    }
+
+    .section_1 h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .section_1 p {
+        width: 100%;
+        
+    }
+
+    .section_2 {
+        margin: 20px 0;
+    }
+
+    .circle {
+        width: 260px;
+        height: 260px;
+        position: relative;
+        left: 0;
+        margin: auto;
+    }
+
+    .section_2 img {
+        width: 260px;
+        position: absolute;
+        left: 0;
+        right: 10%;
+        margin: auto;
+        transform: none;
+    }
+
+    .section_3 {
+        grid-column: span 1;
+
+    }
+    .social {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Brands */
+    .brands {
+        width: 70%;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .brand-card {
+        flex: 1 1 40%;
+        height: 60px;
+    }
+
+     /* Services */
+    .services-section {
+        width: 80%;
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding: 10px 6%;
+        gap: 10px;
+    }
+
+    .service-card {
+        flex-wrap: wrap;
+    }
+
+    .service-card img {
+        width: 80%;
+        height: 100px;
+    }
+
+    .service-info {
+        margin-left: 0;
+        margin-top: 15px;
+    }
 }
+   
